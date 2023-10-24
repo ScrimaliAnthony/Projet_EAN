@@ -1,0 +1,112 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: $color-1;
+    
+    .logo {
+        width: 20vw;
+    }
+
+    .navlink {
+        height: min-content;
+        margin: 1vw;
+
+        button {
+            width: 6vw;
+            height: 2.5vw;
+            font-size: 1vw;
+            background-color: $color-3;
+            color: white;
+            border: none;
+            border-radius: 0.5vw;
+            cursor: pointer;
+        
+            &:hover {
+                transform: scale(1.1);
+            }
+        
+            &:active {
+                color: $color-5;
+            }
+        }
+    }
+
+    .rechercher {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .rechercher_block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .rechercher_formulaire {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                input {
+                    width: 30vw;
+                    height: 5vw;
+                    border-radius: 1vw 0vw 0vw 1vw;
+                    font-size: 2vw;
+                    padding-left: 1vw;
+                    border: none;
+                }
+                
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5vw;
+                    height: 5vw;
+                    border-radius: 0vw 1vw 1vw 0vw;
+                    font-size: 3vw;
+                    color: $color-1;
+                    border: none;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        color: $color-3;
+                    }
+                    
+                    &:active {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            
+            .rechercher_choix {
+                width: 17vw;
+                height: 5vw;
+                font-size: 2vw;
+                margin-top: 2vw;
+                border: none;
+                cursor: pointer;
+                background-color: $color-3;
+                color: white;
+                border-radius: 1vw;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    background-color: $color-2;
+                }
+            }
+
+        }
+        
+        .rechercher_boutonCategorie {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+}

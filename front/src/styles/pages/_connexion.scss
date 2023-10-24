@@ -1,0 +1,30 @@
+.connexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        margin-top: 3vw;
+    }
+
+    .bouton {
+        margin-top: 5vw;
+        width: 10vw;
+        height: 5vw;
+        font-size: 2vw;
+        background-color: rgb(23, 190, 51);
+        color: white;
+        border: none;
+        border-radius: 0.5vw;
+        cursor: pointer;
+    
+        &:hover {
+            transform: scale(1.1);
+        }
+    
+        &:active {
+            color: $color-3;
+        }
+    }
+}

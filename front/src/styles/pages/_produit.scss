@@ -1,0 +1,146 @@
+.produit {
+    padding: 1vw;
+    
+    .produit_bloc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .produit_bloc-1 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p:nth-of-type(1) {
+                    font-size: 2vw;
+                    color: $color-2;
+                }
+                
+                p:nth-of-type(2) {
+                    font-size: 2.5vw;
+                }    
+            }
+        }
+
+        .produit_bloc-2 {
+            width: 100%;
+            margin-top: 2vw;
+            
+            p:nth-of-type(1) {
+                font-size: 1.7vw;
+            }
+            
+            .description {
+                display: flex;
+                justify-content: space-between;
+                
+                p:nth-of-type(1) {
+                    width: 75%;
+                    font-size: 1.7vw;
+                    text-align: justify;
+                }
+                
+                .produit_bloc-2-5 {
+                    display: flex;
+                    flex-direction: column;
+                    white-space: nowrap;
+                    width: 20%;
+                    
+                    .editeur {
+                        border: 2px solid $color-4;
+                        border-bottom: none;
+                        white-space: normal;
+                    }
+                    
+                    .auteur {
+                        border: 2px solid $color-4;
+                        border-bottom: none;
+                    }
+                    
+                    .date_de_publicaton {
+                        border: 2px solid $color-4;
+                    }
+                    
+                    p {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+        
+        .produit_bloc-3 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid $color-2;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+            
+            .produit_bloc-4 {
+                
+                p {
+                    font-size: 1.5vw;
+                    margin-right: 1vw;
+                }
+            }
+        }
+        
+        img {
+            height: 25vw;
+        }
+    }
+
+    .boutons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2vw;
+
+        .btnSupprimer {
+            margin-right: 2vw;
+            height: 5vw;
+            padding: 1vw;
+            color: white;
+            font-size: 2vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            background-color: rgb(250, 59, 59);
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &:active {
+                color: $color-2;
+            }
+        }
+
+        .btnModifier {
+            margin-right: 2vw;
+            height: 5vw;
+            padding: 1vw;
+            color: white;
+            font-size: 2vw;
+            border-radius: 0.5vw;
+            cursor: pointer;
+            background-color: rgb(88, 59, 250);
+            border: none;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &:active {
+                color: $color-2;
+            }
+        }
+    }
+}

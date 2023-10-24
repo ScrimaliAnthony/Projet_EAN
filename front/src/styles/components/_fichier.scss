@@ -1,0 +1,27 @@
+.fichier {
+
+    label {
+        font-size: 1.8vw;
+        margin-right: 2vw;
+    }
+
+    #photo {
+        width: 25vw;
+        font-size: 1.5vw;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    #video {
+        width: 25vw;
+        font-size: 1.5vw;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

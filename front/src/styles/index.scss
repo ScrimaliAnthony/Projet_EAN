@@ -1,0 +1,49 @@
+$color-1: #5682fa;
+$color-2: #4b74d2;
+$color-3: #4065a9;
+$color-4: #355781;
+$color-5: #2a4858;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+ background-color: #d9f2fa;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@import "./components/header";
+@import "./components/boutonCategorie";
+@import "./pages/rechercher";
+@import "./pages/produit";
+@import "./pages/connexion";
+
+@import "./pages/nouveau";
+
+@import "./components/codeBarre";
+@import "./components/typeDeProduit";
+@import "./components/formLivre";
+@import "./components/formMusique";
+@import "./components/formJeuVideo";
+@import "./components/formAudiovisuel";
+
+@import "./components/format";
+@import "./components/varChar";
+@import "./components/texte";
+@import "./components/fichier";
+@import "./components/genre";
+@import "./components/edition";
+@import "./components/age";
+@import "./components/type";
+@import "./components/decenie";

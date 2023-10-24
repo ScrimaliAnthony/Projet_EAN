@@ -1,0 +1,65 @@
+.varChar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        height: 4vw;
+        border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+        font-size: 2vw;
+        padding-left: 1vw;
+        border: none;
+
+        &:focus {
+            transform: scale(1.1);
+        }
+    }
+
+    #genre {
+        width: 20vw;
+    }
+
+    #titre {
+        width: 20vw;
+    }
+
+    #langue {
+        width: 15vw;
+        margin-top: 2vw;
+    }
+
+    #editeur {
+        width: 20vw;
+        margin-top: 2vw;
+    }
+
+    #nombre_de_pages {
+        width: 20vw;
+        margin-top: 2vw;
+    }
+
+    #date_de_sortie {
+        width: 18vw;
+    }
+
+    #age_de_lecture {
+        width: 16vw;
+    }
+
+    #zone_de_commercialisation {
+        width: 27vw;
+    }
+
+    #Format_image {
+        width: 15vw;
+    }
+
+    #Format_son {
+        width: 13vw;
+    }
+
+    #sous_titre {
+        width: 15vw;
+    }
+}
