@@ -1,5 +1,7 @@
 # Projet EAN
 
+[Accédez au site ici](http://www.scrimboxean.com/)
+
 ## Table des matières
 
 - [Description](#description)
@@ -34,6 +36,11 @@ Projet EAN a pour but de permettre la création d'annonces dans une base de donn
 - Back-end: Node.js / Express
 - Front-end: React
 - Styles: SCSS
+- Hébergement: Google Cloud Platform
+
+### Hébergement sur Google Cloud
+
+Ce projet est hébergé et fonctionne sur Google Cloud Platform, utilisant différents services tels que Compute Engine, Cloud Storage, etc. Ceci garantit une haute disponibilité et une mise à l'échelle facile.
 
 ## Fonctionnalités
 
@@ -83,18 +90,18 @@ Si vous préférez, vous pouvez également copier et coller les commandes SQL di
 Créez un fichier `.env` à la racine du répertoire back-end pour stocker vos variables d'environnement. Voici un exemple de fichier `.env` :
 
 # Configuration de la base de données
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=''
-DB_NAME=scrimbox_ean
-JWT_SECRET=VotreCleSecrete # Clé secrète pour JWT
+`DB_HOST`="localhost"  
+`DB_USER`="root"  
+`DB_PASSWORD`=''  
+`DB_NAME`=scrimbox_ean  
+`JWT_SECRET`=VotreCleSecrete # Clé secrète pour JWT  
 
 # Configuration de Google Cloud
-GC_ID="VotreIDGoogleCloud"
-GC_BUCKETImages="VotreBucketImages"         # Nom du bucket pour les images
-GC_BUCKETVideo="VotreBucketVideos"          # Nom du bucket pour les vidéos
-URL_BUCKETImages="VotreURLBucketImages"
-URL_BUCKETVideo="VotreURLBucketVideos"
+`GC_I`D="VotreIDGoogleCloud"  
+`GC_BUCKETImages`="VotreBucketImages"         # Nom du bucket pour les images  
+`GC_BUCKETVideo`="VotreBucketVideos"          # Nom du bucket pour les vidéos  
+`URL_BUCKETImages`="VotreURLBucketImages"  
+`URL_BUCKETVideo`="VotreURLBucketVideos"  
 
 # Chemin du fichier de clé pour Google Cloud
 KEYFILE="VotreCheminVersLeFichierDeCle"
@@ -113,56 +120,72 @@ Pour démarrer le serveur en mode développement, exécutez :
 
 Cela démarrera le serveur en mode développement et il sera accessible à l'adresse `http://localhost:PORT\, où `PORT` est le numéro de port configuré dans votre fichier `.env`.
 
-#### API Endpoints
+## API Endpoints
 
-Cette section détaille les principaux endpoints de l'API, fournissant aux développeurs les informations nécessaires pour interagir efficacement avec le back-end du projet.
+Les routes suivantes sont disponibles pour interagir avec le back-end :
 
-audiovisuels
+### Audiovisuels
 
-- `GET /audioVisuel/`: récupère la liste de tous les produits audiovisuel.
-- `GET /audioVisuel/:id`: récupère la liste des produits audiovisuel qui correspondent à la recherche.
-- `POST /audioVisuel/`: crée un nouveau produit audiovisuel.
-- `PUT /audioVisuel/:id`: met à jour les informations d'un produit audiovisuel existant.
-- `DELETE /audioVisuel/:id`: supprime un produit audiovisuel.
+| Route                 | Méthode HTTP | Description                                        |
+| --------------------- | ------------ | -------------------------------------------------- |
+| `/audioVisuel/`       | GET          | Récupère la liste de tous les produits audiovisuels.|
+| `/audioVisuel/:id`    | GET          | Récupère un produit audiovisuel spécifique par ID.  |
+| `/audioVisuel/`       | POST         | Crée un nouveau produit audiovisuel.                |
+| `/audioVisuel/:id`    | PUT          | Met à jour un produit audiovisuel spécifique.       |
+| `/audioVisuel/:id`    | DELETE       | Supprime un produit audiovisuel spécifique.         |
 
-livre
+### Livres
 
-- `GET /livre/`: récupère la liste de tous les produits livre.
-- `GET /livre/:id`: récupère la liste des produits livre qui correspondent à la recherche.
-- `POST /livre/`: crée un nouveau produit livre.
-- `PUT /livre/:id`: met à jour les informations d'un produit livre existant.
-- `DELETE /livre/:id`: supprime un produit livre.
+| Route                 | Méthode HTTP | Description                                       |
+| --------------------- | ------------ | ------------------------------------------------- |
+| `/livre/`             | GET          | Récupère la liste de tous les produits livres.     |
+| `/livre/:id`          | GET          | Récupère un produit livre spécifique par ID.        |
+| `/livre/`             | POST         | Crée un nouveau produit livre.                      |
+| `/livre/:id`          | PUT          | Met à jour un produit livre spécifique.             |
+| `/livre/:id`          | DELETE       | Supprime un produit livre spécifique.               |
 
-musique
+### Musique
 
-- `GET /musique/`: récupère la liste de tous les produits musique.
-- `GET /musique/:id`: récupère la liste des produits musique qui correspondent à la recherche.
-- `POST /musique/`: crée un nouveau produit musique.
-- `PUT /musique/:id`: met à jour les informations d'un produit musique existant.
-- `DELETE /musique/:id`: supprime un produit musique.
+| Route                 | Méthode HTTP | Description                                       |
+| --------------------- | ------------ | ------------------------------------------------- |
+| `/musique/`           | GET          | Récupère la liste de tous les produits musique.    |
+| `/musique/:id`        | GET          | Récupère un produit musique spécifique par ID.      |
+| `/musique/`           | POST         | Crée un nouveau produit musique.                    |
+| `/musique/:id`        | PUT          | Met à jour un produit musique spécifique.           |
+| `/musique/:id`        | DELETE       | Supprime un produit musique spécifique.             |
 
-jeuxVideo
+### Jeux vidéo
 
-- `GET /jeuxVideo/`: récupère la liste de tous les produits jeuxVideo.
-- `GET /jeuxVideo/:id`: récupère la liste des produits jeuxVideo qui correspondent à la recherche.
-- `POST /jeuxVideo/`: crée un nouveau produit jeuxVideo.
-- `PUT /jeuxVideo/:id`: met à jour les informations d'un produit jeuxVideo existant.
-- `DELETE /jeuxVideo/:id`: supprime un produit jeuxVideo.
+| Route                 | Méthode HTTP | Description                                        |
+| --------------------- | ------------ | -------------------------------------------------- |
+| `/jeuxVideo/`         | GET          | Récupère la liste de tous les produits jeux vidéo.  |
+| `/jeuxVideo/:id`      | GET          | Récupère un produit jeux vidéo spécifique par ID.    |
+| `/jeuxVideo/`         | POST         | Crée un nouveau produit jeux vidéo.                  |
+| `/jeuxVideo/:id`      | PUT          | Met à jour un produit jeux vidéo spécifique.         |
+| `/jeuxVideo/:id`      | DELETE       | Supprime un produit jeux vidéo spécifique.           |
 
-produit
+### Produits
 
-- `GET /produit/`: récupère la liste de tous les produits.
-- `GET /produit/:id`: récupère la liste des produits qui correspondent à la recherche.
+| Route                 | Méthode HTTP | Description                                       |
+| --------------------- | ------------ | ------------------------------------------------- |
+| `/produit/`           | GET          | Récupère la liste de tous les produits.            |
+| `/produit/:id`        | GET          | Récupère un produit spécifique par ID.              |
 
-uniqueCodeBarre
+### Codes-barres uniques
 
-- `GET /uniqueCodeBarre/`: récupère la liste de tous les code barre.
-- `POST /uniqueCodeBarre/`: crée un nouveau code barre.
-- `DELETE /uniqueCodeBarre/:id`: supprime un code barre.
+| Route                 | Méthode HTTP | Description                                       |
+| --------------------- | ------------ | ------------------------------------------------- |
+| `/uniqueCodeBarre/`   | GET          | Récupère la liste de tous les codes-barres.        |
+| `/uniqueCodeBarre/`   | POST         | Crée un nouveau code-barres.                       |
+| `/uniqueCodeBarre/:id`| DELETE       | Supprime un code-barres spécifique.                |
 
-user
-- `POST /user/create`: crée un nouvel utilisateur.
-- `POST /user/login`: se connecte à un compte.
+### Utilisateurs
+
+| Route                 | Méthode HTTP | Description                                       |
+| --------------------- | ------------ | ------------------------------------------------- |
+| `/user/create`        | POST         | Crée un nouvel utilisateur.                        |
+| `/user/login`         | POST         | Se connecte à un compte utilisateur.               |
+
 
 ### Configuration du Front-End
 
