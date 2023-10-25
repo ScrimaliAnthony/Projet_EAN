@@ -97,7 +97,7 @@ Créez un fichier `.env` à la racine du répertoire back-end pour stocker vos v
 `JWT_SECRET`=VotreCleSecrete # Clé secrète pour JWT  
 
 # Configuration de Google Cloud
-`GC_I`D="VotreIDGoogleCloud"  
+`GC_ID`="VotreIDGoogleCloud"  
 `GC_BUCKETImages`="VotreBucketImages"         # Nom du bucket pour les images  
 `GC_BUCKETVideo`="VotreBucketVideos"          # Nom du bucket pour les vidéos  
 `URL_BUCKETImages`="VotreURLBucketImages"  
